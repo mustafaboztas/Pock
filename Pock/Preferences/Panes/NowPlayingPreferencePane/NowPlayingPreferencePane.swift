@@ -18,9 +18,9 @@ class NowPlayingPreferencePane: NSViewController, PreferencePane {
     var toolbarItemIcon:          NSImage {
         let id: String
         if #available(macOS 10.15, *) {
-            id = "com.apple.Music"
+            id = "Spotify.app"
         }else {
-            id = "com.apple.iTunes"
+            id = "Spotify.app"
         }
         let path = NSWorkspace.shared.absolutePathForApplication(withBundleIdentifier: id)!
         return NSWorkspace.shared.icon(forFile: path)
